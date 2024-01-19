@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_event_manager" model="res.groups">
+        <field name="name">Event Manager</field>
+    </record>
+    <record id="model_event_management_access" model="ir.model.access">
+        <field name="name">Event Manager Access</field>
+        <field name="model_id" ref="event_management.model_event_management"/>
+        <field name="group_id" ref="event_management.group_event_manager"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+</odoo>

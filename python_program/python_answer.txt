@@ -1,0 +1,42 @@
+1. Python --> Python is a programing language with objects, modules, threads, exception &
+    automatic memory management.
+2. Key Feature in python --> 1.Python is an interpreted language.
+    2.Python is dynamically typed.
+    3.Python is well suited to oops.
+3. dynamically typed --> means that type of the variable is determined only during runtime.
+4. sotrong typed --> means that variable do have a type & that type matters when performing 
+    operations on a variable.
+5. diff b/w array and list --> array & list in python have the same way of storing data, but arrays
+    can hold only a single data type element where as list can hold any data typed element.
+6. Python class --> A class is like an object constructor or blue print for creating object.
+7. __init__ --> is used to assign values to object properties.
+8. self --> Self parameter is a refrence to the current instance of the class & is used to access
+    variables that belongs to the class.
+9. Memory Management in Python --> 1.Memory is managed by python private heap space.
+    2.Allocation of python heap space for python object is done by python memory manager.
+    3.Python also have an inbuilt garbage collector.
+10. range() --> returns a sequence of numbers, starting from 0 by default & increment by 1 & ends 
+    at a specified numbers.
+11. diff b/w list & tuple --> 1.List is mutable & Tuple is immutable.
+    2.a = list() & a = tuple(,)
+    3.List iteration is slower, time consuming & Tuple iteration is faster, less time consuming.
+    4.List consumes more memory & Tuple consumes less memory.
+    5.List provides many inbuilt methods & Tuple have less inbuilt methods.
+12. lambda function --> A lambda function is a small anonymous function. A lambda function can 
+    take any number of arguments but can only have one expression.
+13. iterators and types --> An iterator is an object that contains a countable numbers of values.
+    two types 1. __iter__()
+    2. __next__()
+14. pickling --> Pickle module accepts any python object & converts it into a string representation
+    & dumps it into a file by using dump function this process is called pickling.
+15. unpickling
+16. generators
+17. dictionary
+18. args
+19. kwargs
+20. shallow copy, example
+21. deep copy, example
+22. decorators
+23. sets
+24. oops concepts
+25. list compreshension

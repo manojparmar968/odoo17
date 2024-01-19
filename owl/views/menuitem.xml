@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Owl Tutorial" id="menu_owl_tutorial" sequence="10" />
+    <menuitem id="menu_owl_sales_dashboard" name="Static Sales Dashboard" parent="menu_owl_tutorial" sequence="1" action="action_owl_sales_dashboard" />
+    <menuitem id="menu_owl_sales_dashboard_dynamic" name="Dynamic Sales Dashboard" parent="menu_owl_tutorial" sequence="1" action="action_owl_sales_dashboard_dynamic" />
+
+    <menuitem id="sales_dashboard_without_owl_js" name="Reporting" parent="menu_owl_tutorial" sequence="10"/>
+    <menuitem id="menu_sales_order_report" name="Customer" parent="sales_dashboard_without_owl_js" sequence="10" />
+</odoo>

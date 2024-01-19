@@ -1,0 +1,27 @@
+"""
+1. Python
+2. Key Feature in python
+3. dynamically typed
+4. sotrong typed
+5. diff b/w array and list
+6. Python class
+7. __init__
+8. self
+9. Memory Management in Python
+10. range()
+11. diff b/w list & tuple
+12. lambda function
+13. iterators and types
+14. pickling
+15. unpickling
+16. generators
+17. dictionary
+18. args
+19. kwargs
+20. shallow copy, example
+21. deep copy, example
+22. decorators
+23. sets
+24. oops concepts
+25. list compreshension
+"""

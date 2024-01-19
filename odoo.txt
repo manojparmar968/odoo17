@@ -1,0 +1,88 @@
+# inherit call
+    super(className,self)
+
+# inherit button
+    def action_button(self):
+        res = super(className,self).action_button()
+        return res
+
+# search()
+    The search method is used to search records with in the given model based on the domain 
+    passed as the argument.
+    self.env['model.name'].search([('fieldName', '=', value),
+                                ('name', 'in', module_list),
+                                ('id', '!=', ()),
+                                ('id', 'not in', records.ids),
+    ],limit=1)
+# browse()
+    Browse method is used to return a set of records for the ids passed as the parameter in the 
+    current working model.
+    self.env['model.name'].browse(res[0] or [condition])
+
+# filtered()
+    Filtered method returns a set of records which satisfies the function given as argument.
+    self.filtered(lambda records: records.env.user.id != vals["user_id"])
+        .filtered(lambda a: not a.reconcile)
+        .filtered(lambda r: r.code and not r.account_type)._fun()
+        .filtered(lambda line: line.journal_id == journal)\
+        .sorted('internal_index')\.mapped('internal_index')
+
+# mapped()
+    Mapped function applies the function given as an argument on all the records in the self & 
+    then returns the result as a list or record set.
+    self.mapped("company_id")
+
+# name_get()
+    name_get() function returns a list of pairs (id, text_repr) for each records and the return
+    type is a list(tuple)
+    def name_get(self):
+        return list(zip(records._ids, records.mapped('display_name')))
+        return [(record.id, record.display_name) for record in self]
+
+# _name_search()
+    _name_search is responsible for searching the specific records by some field values in 
+    relational field.
+    def _name_search(self, name, domain=None, operator='ilike', limit=None, order=None):
+        return self._search(domain, limit=limit, order=order)
+        return super()._name_search(name, domain, operator, limit, order)
+
+# sort()
+    value.sort(key=lambda x: x['sort_weight'])
+    value.sort(key=lambda k: (k['all_reached'], k['total_completeness']), reverse=True)
+    value.sort(key=lambda values: values['user_id'][0] != self.env.user.id if values['user_id'] else -1)
+
+# sorted()
+    sorted method returns the records inside the self, ordered by the key passed as the argument.
+    if reverse is set True, returns the result in reverse order.
+    .sorted(lambda m: (m.date, m.ref or '', m.id))
+    .sorted(lambda x: x.invoice_date_due or x.date)
+    .sorted('date_start', reverse=True)
+
+# with_context()
+    This method generates a new recordset with an additional context.
+    self.with_context(force_delete=True)
+
+# default_get()
+    default_get method collect the default values for all the fields when creating a new record.
+    def default_get(self, default_fields):
+        res = super(ClassName, self).default_get(fields)
+        return res
+        contextual_self = self.with_context(default_name=default_name, default_code=default_code) # pass you need in placeof self
+        return super(ClassName, self).default_get(default_fields)
+
+# Delegation inheritance
+    Delegation inheritance we use _inherits attribute, this type of inheritance is used if you want
+    to sink another model to your current model without affecting the views.
+    _inherits = {'account.move': 'move_id'}
+
+# with_user(user)
+    If the user is not the superuser, return a new version of this recordset connected to the 
+    specified in non-superuser mode.
+
+# with_company(company)
+    Return a new instance of this recordset with altered context, such that:
+    result.env.company = company
+    result.env.companies = self.env.companies | company
+
+# Need to read
+flush_model

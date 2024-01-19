@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="main_menu_contact_reporting" name="Reporting" parent="contacts.menu_contacts" sequence="2"/>
+    <menuitem id="contact_reporting" name="Contacts" parent="main_menu_contact_reporting" action="action_contact_res_partner" sequence="1"/>
+    
+</odoo>

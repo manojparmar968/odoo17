@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_owl_sales_dashboard" model="ir.actions.client">
+            <field name="name">Sales Dashboard</field>
+            <field name="tag">owl.sales_dashboard</field>
+        </record>
+        <record id="action_owl_sales_dashboard_dynamic" model="ir.actions.client">
+            <field name="name">Dynamic Sales Dashboard</field>
+            <field name="tag">owl.sales_dashboard_dynamic</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="res_partner_report">
+            <field name="name">Contact</field>
+            <field name="res_model">res.partner</field>
+            <field name="domain">[]</field>
+            <!-- <field name="context">{'search_default_workcenter': 1,
+                                   'search_default_ready': True,
+                                   'search_default_waiting': True,
+                                   'search_default_pending': True,
+                                   'search_default_progress': True,}</field> -->
+            <field name="view_mode">graph,pivot,tree,form,gantt</field>
+            <!-- <field name="search_view_id" ref="view_mrp_production_work_order_search"/> -->
+        </record>
+    </data>
+</odoo>

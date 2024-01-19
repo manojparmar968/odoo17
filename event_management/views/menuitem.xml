@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="event management"
+        id="menu_event_management_menu_root">
+        <menuitem id="menu_event_management" name="event" action="action_event_management" />
+    </menuitem>
+    
+</odoo>
+ <!-- groups="account.group_account_readonly" -->

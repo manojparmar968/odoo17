@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_contact_res_partner" model="ir.actions.client">
+            <field name="name">Contacts</field>
+            <field name="tag">res_partner</field>
+            <field name="context" eval="{'report_id': ref('contact_report_graph.contact_res_partner')}"/>
+        </record>
+    </data>
+</odoo>
