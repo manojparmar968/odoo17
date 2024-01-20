@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <KpiCardDynamic name = "'Quations'" value="state.quotations.value" percentage="state.quotations.percentage"/>
+                        <KpiCardDynamic onClick.bind="viewQuotations" name = "'Quations'" value="state.quotations.value" percentage="state.quotations.percentage"/>
                         <KpiCardDynamic name = "'Orders'" value="20" percentage="20"/>
                         <KpiCardDynamic name = "'Revenues'" value="'30.50K'" percentage="-3"/>
                         <KpiCardDynamic name = "'Average Orders'" value="'2.5K'" percentage="-10"/>

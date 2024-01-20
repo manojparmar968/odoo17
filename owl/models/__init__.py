@@ -1,1 +1,1 @@
-from . import event_management
+from . import res_partner

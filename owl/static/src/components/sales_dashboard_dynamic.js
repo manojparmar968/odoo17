@@ -17,6 +17,7 @@ export class OwlSalesDashboardDynamic extends Component {
             period: 90,
         })
         this.orm = useService("orm")
+        this.actionService = useService("action")
 
         onWillStart(async ()=>{
             // this.getDates()
@@ -42,6 +43,23 @@ export class OwlSalesDashboardDynamic extends Component {
         const data = await this.orm.searchCount("sale.order", domain)
         
         this.state.quotations.value = data
+    }
+
+    viewQuotations(){
+        let domain = [['state', 'in', ['sent','draft']]]
+        // working but not all filter's
+        this.actionService.doAction("sale.action_quotations_with_onboarding", {
+            additionalContext: {
+                search_default_draft: 1,
+            }
+        })
+        // this.actionService.doAction({
+        //     'type': 'ir.actions.act_window',
+        //     'name': "Quotations",
+        //     'res_model': 'sale.order',
+        //     'views': [[799, 'list'], [798, 'form']],
+        //     domain,
+        // })
     }
 }
 
