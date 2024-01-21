@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_owl_todo_list_form" model="ir.ui.view">
+            <field name="name">owl.todo.list.form</field>
+            <field name="model">owl.todo.list</field>
+            <field name="arch" type="xml">
+                <form string="owl todo list">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="completed"/>
+                                <field name="color" widget="color"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_owl_todo_list_list" model="ir.ui.view">
+            <field name="name">owl.todo.list.list</field>
+            <field name="model">owl.todo.list</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="completed"/>
+                    <field name="color" widget="color"/>
+                   
+                </tree>
+            </field>
+        </record>
+        <record id="action_owl_todo_list" model="ir.actions.act_window">
+            <field name="name">owl todo list</field>
+            <field name="res_model">owl.todo.list</field>
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+
+        <record id="action_owl_todo_list_js" model="ir.actions.client">
+            <field name="name">Todo List OWL</field>
+            <field name="tag">owl1.action_todo_list_js</field>
+        </record>
+    </data>
+
+    <menuitem name="owl tutorial" id="menu_owl_tutorial1" sequence="10">
+        <menuitem id="menu_owl_todo_list" name="Todo List" sequence="10" action="action_owl_todo_list" />
+        <menuitem name="Todo List OWL" id="menu_owl_todo_list_js" sequence="10" action="action_owl_todo_list_js"/>
+    </menuitem>
+</odoo>
