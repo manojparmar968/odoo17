@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Customer Import Cron Job -->
+    <!-- <record id="" model="ir.cron">
+        <field name="name">Automatic Import Customer</field>
+        <field name="model_id" ref="model_"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model.import_customer()</field>
+        <field name="interval_number">15</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field> -->
+        <!-- <field name="nextcall" eval="(DateTime.now().replace(hour=2, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')" /> -->
+        <!-- <field name="doall" eval="False"/> 
+    </record> -->
+
+</odoo>
