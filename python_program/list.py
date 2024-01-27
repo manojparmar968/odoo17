@@ -44,7 +44,7 @@ thislist.sort() # sort the list alphanumerically, ascending, by default
 thislist.sort(reverse = True) # sort descending if user reverse = True
     # B. reverse()
 thislist.reverse()
-print(thislist)
+print(thislist,thislist[::-1])
 
 # 7. Copy Lists
     # A. copy() method
