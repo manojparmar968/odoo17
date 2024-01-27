@@ -43,3 +43,39 @@ sales Payment Tokens ---> model=payment.token
 sales Payment Transactions ---> model=payment.transaction
 sales Activity Types ---> model=mail.activity.type
 sales Sale Order Plans ---> model=mail.activity.plan
+
+======================Purchase============================================
+Purchase Requests for Quotation, Purchase Orders --> model=purchase.order
+Purchase Blanket Orders --> model=purchase.requisition
+Purchase Vendors --> model=res.partner
+Purchase Products --> model=product.template
+Purchase Product Variants --> model=product.product
+Purchase Vendor Pricelists --> model=product.supplierinfo
+Purchase Attributes --> model=product.attribute
+Purchase Product Categories --> model=product.category
+Purchase Units of Measure Categories --> model=uom.category
+
+=====================Inventory=============================================
+Inventory Receipts, Deliveries, Dropships --> model=stock.picking
+Inventory Manufacturings --> model=mrp.production
+Inventory Batch Transfers --> model=stock.picking.batch
+Inventory Inventory Adjustments, Locations --> model=stock.quant
+Inventory Scrap Orders --> model=stock.scrap
+Inventory Landed Costs --> model=stock.landed.cost
+Inventory Replenishment, Reordering Rules --> model=stock.warehouse.orderpoint
+Inventory Products --> model=product.template
+Inventory Product Variants, Stock --> model=product.product
+Inventory Lots/Serial Numbers --> model=stock.lot
+Inventory Moves History --> model=stock.move.line
+Inventory Move Analysis --> model=stock.move
+Inventory Stock Valuation, Inventory Aging --> model=stock.valuation.layer
+Inventory Warehouses --> model=stock.warehouse
+Inventory Operations Types --> model=stock.picking.type
+Inventory Product Categories --> model=product.category
+Inventory Attributes --> model=product.attribute
+Inventory Barcode Nomenclatures --> model=barcode.nomenclature
+Inventory Units of Measure Categories --> model=uom.category
+Shipping Methods --> model=delivery.carrier
+Zip Prefix --> model=delivery.zip.prefix
+
+============================Manufacturing============================================
