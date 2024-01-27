@@ -79,3 +79,16 @@ Shipping Methods --> model=delivery.carrier
 Zip Prefix --> model=delivery.zip.prefix
 
 ============================Manufacturing============================================
+Manufacturing Manufacturing Orders --> model=mrp.production
+Manufacturing Work Orders --> model=mrp.workorder
+Manufacturing Unbuild Orders --> model=mrp.unbuild
+Manufacturing Scrap Orders --> model=stock.scrap
+Manufacturing Products --> model=product.template
+Manufacturing Product Variants --> model=product.product
+Manufacturing Bills of Materials --> model=mrp.bom
+Manufacturing Lots/Serial Numbers --> model=stock.lot
+Manufacturing Work Centers --> model=mrp.workcenter
+Manufacturing Operations --> model=mrp.routing.workcenter
+Manufacturing
+
+=====================================================================================
