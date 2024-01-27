@@ -1,9 +1,27 @@
-n= 5
-k = (n*2) - 2
+n=[5,2,1,4,3,2,8,4,2,1,2,0]
+new_lst = []
+count_list = []
+c = 0
 
-middle_row = (n+2)//2
+for i in n:
+  if i not in new_lst:
+    new_lst.append(i)
+    c = n.count(i)
+    count_list.append(c)
+print(new_lst,count_list)
+d = {}
+for k in new_lst:
+  for v in count_list:
+    d[k] = v
+    count_list.remove(v)
+    break
+print(d)
 
-for i in range(middle_row):
-  print(" " * (middle_row-i),"*" * (i*2+1))
-for i in range(middle_row-2,-1,-1):
-  print(" " * (middle_row -i), "*" * (i*2+1))
+dd = {}
+for i in n:
+  if i in dd:
+    dd[i] += 1
+  else:
+    dd[i] = 1
+
+print(dd)

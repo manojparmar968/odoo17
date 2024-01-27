@@ -1,0 +1,45 @@
+=====================Accounting=========================================
+Accounting Dashboard --> model=account.journal
+Accounting Customer Invoices, Customer Credit Notes, Journal Entries --> model=account.move
+Accounting Customer Amounts to Settle, Journal Items  --> model=account.move.line
+Accounting Customer Payments --> model=account.payment
+Accounting Customer Products --> model=product.template
+Accounting Customer customers --> model=res.partner
+Accounting vendor Bills, vendor Refunds --> model=account.move
+Accounting vendor Amounts to Settle--> model=account.move.line
+Accounting Vendor Payments --> model=account.payment
+Accounting vendor Employee Expenses --> model=hr.expense.sheet
+Accounting vendor Bank Accounts --> model=res.partner.bank
+Accounting vendor Products --> model=product.template
+Accounting vendor,  --> model=res.partner
+Payment Terms --> model=account.payment.term
+Accounting Incoterms --> model=account.incoterms
+Reconciliation Models --> model=account.reconcile.model
+Chart of Accounts --> model=account.account
+Taxes --> model=account.tax
+Currencies --> model=res.currency
+Fiscal Positions --> model=account.fiscal.position
+Journal Groups --> model=account.journal.group
+Tax Groups --> model=account.tax.group
+Payment Providers --> model=payment.provider
+Payment Methods --> model=payment.method
+Payment Tokens --> model=payment.token
+Payment Transactions --> model=payment.transaction
+Product Categories --> model=product.category
+
+=====================SALE===============================================
+sale Quotations, order, Orders to Invoice, Orders to Upsell, ---> model=sale.order
+Sales Teams ---> model=crm.team
+sales customer --> model=res.partner
+sale Products --> model=product.template
+sale Product Variants ---> model=product.product
+sales Quotation Templates ---> model=sale.order.template
+sales Tags ---> model=crm.tag
+sales Attributes ---> model=product.attribute
+sales Product Categories ---> model=product.category
+sales Payment Providers ---> model=payment.provider
+sales Payment Methods ---> model=payment.method
+sales Payment Tokens ---> model=payment.token
+sales Payment Transactions ---> model=payment.transaction
+sales Activity Types ---> model=mail.activity.type
+sales Sale Order Plans ---> model=mail.activity.plan

@@ -31,6 +31,14 @@
             <xpath expr="//form" position="attributes">
                 <attribute name="js_class">res_partner_form_view</attribute>
             </xpath>
+            <xpath expr="//field[@name='email']" position="attributes">
+                <attribute name="email">valid_email</attribute>
+            </xpath>
+           
+            <xpath expr="//field[@name='website']" position="before">
+                <field name="username" widget="username"/>
+                <field name="expected_salary" widget="range"/>
+            </xpath>
         </field>
     </record>
 </data>

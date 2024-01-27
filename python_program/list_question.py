@@ -17,7 +17,7 @@
 11. l = [11,22,30,8,35] #if > 20 -1, < 20 -2 using list comphersion.
 12. lst = [1, 2, 3, 4, 5] reverse a list, without any built in function or slicing.
 13. l = [11,22,11,30,8,35,8,8,22] count and remove duplicates from list.
-14. l=['a','b','b','a','c','b'] count and convert to dictinory.
+14. l=['a','b','b','a','c','b'] convert to dictinory.
 15. * * * * *
     * * * *
     * * *     n = 5

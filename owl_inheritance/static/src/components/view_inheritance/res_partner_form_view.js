@@ -8,7 +8,7 @@ import { useService } from "@web/core/utils/hooks"
 class ResPartnerFormController extends FormController {
     setup(){
         super.setup()
-        console.log("This is res partner form controller")
+        // console.log("This is res partner form controller")
         this.action = useService("action")
     }
 

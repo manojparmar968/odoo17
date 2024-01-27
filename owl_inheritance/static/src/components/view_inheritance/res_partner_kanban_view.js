@@ -10,13 +10,13 @@ const { onWillStart } = owl
 class ResPartnerKanbanController extends KanbanController {
     setup() {
         super.setup();
-        console.log("Working kanban");
+        // console.log("Working kanban");
         this.action = useService("action")
         this.orm = useService("orm")
 
         onWillStart(async ()=>{
             this.customerLocations = await this.orm.readGroup("res.partner", [], ['state_id'], ['state_id'])
-            console.log(this.customerLocations)
+            // console.log(this.customerLocations)
         })
     }
 
