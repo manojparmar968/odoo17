@@ -46,6 +46,12 @@
         return self._search(domain, limit=limit, order=order)
         return super()._name_search(name, domain, operator, limit, order)
 
+# search_read()
+    search_read will return the list of dictionary containing the values of fields.
+    request.env['model.name'].search_read([], ['name'])
+    .search_read([],[])
+    self.env[model_name].search_read([], ['create_uid'])
+
 # sort()
     value.sort(key=lambda x: x['sort_weight'])
     value.sort(key=lambda k: (k['all_reached'], k['total_completeness']), reverse=True)
