@@ -40,8 +40,15 @@ class Student(models.Model):
             ('april', 'April')
         ],
     )
-    fees_paid_amount = fields.Float("Fees Paid")
-
+    fees_paid_amount = fields.Float("Fees Paid Amount")
+    currency_id = fields.Many2one(
+        'res.currency', string='Currency',
+        default=lambda self: self.env.user.company_id.currency_id.id
+    )
+    company_id = fields.Many2one(
+        'res.company', string='Company',
+        default=lambda self: self.env.company
+    )
    
     @api.constrains('mobile','mobile_no')
     def _check_mobile_length(self):
@@ -58,7 +65,6 @@ class Student(models.Model):
     
     @api.onchange('fees_Paid_month')
     def onchange_fees_Paid_month(self):
-        print("\n\n\n\n\n\n",self,"\n",self.fees_Paid_month,"self.Stage = ",self.Stage)
         if self.fees_Paid_month == 'jan' and self.Stage == 'fees_paid':
             self.Stage = 'fees_not_paid'
         if self.fees_Paid_month == 'feb' and self.Stage == 'fees_paid':

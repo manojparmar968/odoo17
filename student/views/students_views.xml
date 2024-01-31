@@ -9,7 +9,6 @@
                     <header>
                         <button name="action_confirm" string="Fees Paid" class="btn-primary" type="object" groups="student.group_student_user"/>
                         <field name="Stage" widget="statusbar" statusbar_visible="fees_not_paid,fees_paid"/>
-                       
                     </header>
                     <sheet>
                         <group>
@@ -23,11 +22,19 @@
                             <group>
                                 <field name="student_class"/>
                                 <field name="Section"/>
-                                <field name="Is_active"/>
-                                <field name="fees_Paid_month"/>
+                                <field name="Is_active" readonly="1" />
+                                <field name="fees_Paid_month" readonly="1"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="fees_paid_amount" widget="monetary"/>
                             </group>
                         </group>
                     </sheet>
+                    <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="message_ids"/>
+                    </div>
                 </form>
             </field>
         </record>
@@ -36,13 +43,18 @@
             <field name="model">student</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="currency_id" column_invisible="1"/>
+                    <field name="company_id" column_invisible="True"/>
                     <field name="name"/>
                     <field name="Roll_no"/>
                     <field name="mobile_no"/>
                     <field name="mobile" />
                     <field name="student_class"/>
                     <field name="Section"/>
-                    <field name="Is_active"/>
+                    <field name="Is_active" optional="hide"/>
+                    <field name="Stage"/>
+                    <field name="fees_Paid_month" optional="hide"/>
+                    <field name="fees_paid_amount" widget="monetary" sum="Total Amount"/>
                 </tree>
             </field>
         </record>
@@ -55,9 +67,11 @@
                     <field string="mobile_no" name="mobile_no" />
                     <field name="mobile" />
                     <separator/>
+                    <filter string="Stage" name="Stage" domain="[('Stage', '=', 'fees_not_paid')]"/>
+                    <separator/>
                     <group string="Group By">
-                        <filter string="Class" name="student_class" domain="" context="{'group_by':'name'}"/>
-                        <filter string="Section" name="Section" domain="" context="{'group_by':'mobile_no'}"/>
+                        <filter string="Class" name="group_by_student_class" domain="" context="{'group_by':'student_class'}"/>
+                        <filter string="Section" name="group_by_Section" domain="" context="{'group_by':'Section'}"/>
                     </group>
                 </search>
             </field>
