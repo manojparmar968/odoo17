@@ -19,6 +19,12 @@
 13. l = [11,22,11,30,8,35,8,8,22] count and remove duplicates from list.
 14. l=['a','b','b','a','c','b'] convert to dictinory.
 15. n = 123456 Reverse a number & Reverse a string s = 'Manoj'
+16. remove duplicates from a list.nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
+17. common elements between two lists.
+  list_a = [1, 2, 3, 4, 5]
+  list_b = [4, 5, 6, 7, 8]
+18. Middle Element in a List. numList = [1, 2, 3, 4, 5,6,7]
+19. Counting the occurrences of elements in the list. days = ['S','M','M','M','F','S']
 15. * * * * *
     * * * *
     * * *     n = 5

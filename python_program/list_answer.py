@@ -6,6 +6,26 @@ l1 = [1,3,5,7,8,10]
 l2 = [2,3,4,6,8,9,10]
 print(list(set(l1+l2)))
 
+# common elements between two lists.
+list_a = [1, 2, 3, 4, 5]
+list_b = [4, 5, 6, 7, 8]
+
+lst = []
+for i in list_a:
+    if i in list_b:
+        lst.append(i)
+print(lst)
+
+# Middle Element in a List
+numList = [1, 2, 3, 4, 5,6,7]
+midElement = int((len(numList)/2)) 
+print(numList[midElement])
+
+# Counting the occurrences of elements in the list
+days = ['S','M','M','M','F','S']
+y = set(days)
+print([[i,days.count(i)] for i in y])
+
 # count a total number in "n = 123654" have
 n = 123654
 count = 0
