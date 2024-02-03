@@ -1,0 +1,58 @@
+1. Find duplicate rows in a table
+Select field_name,COUNT(*) FROM table_name GROUP BY field_name HAVING COUNT(*) > 1 ORDER BY field_name;
+
+2. Find Second Max from table
+select max(salary) as SecondHighSalary from employee where salary < (select max(salary) from employee);
+
+3. update table 
+UPDATE table_name set field_name = 'value';
+
+4. How to get password or update a password of user's
+SELECT id,login,password from res_users where active = True;
+update res_users set password = 'admin' where id = ;
+
+5. Join --> is used to combine columns from one (self join) or more tables.
+    a. Inner Join --> selects those records that have match values in both tables.
+        select field_name1,field_name2 FROM table_name1 INNER JOIN table_name2 ON field_name1 = field_name2;
+    
+    b. left join --> returns all records from the left table & matching records from right table.
+        select field_name1,field_name2 from table_name1 LEFT JOIN table_name2 ON field_name1 = field_name2;
+
+        left outer join --> only rows from the left table.
+        select field_name1,field_name2 from table_name1 LEFT JOIN table_name2 ON field_name1 = field_name2
+        WHERE id IS NULL;
+    
+    c. right join --> returns all records from the right table & matching records from left table.
+        select field_name1,field_name2 from table_name1 RIGHT JOIN table_name2 ON field_name1 = field_name2;
+
+        right outer join --> only rows from the right table.
+        select field_name1,field_name2 from table_name1 RIGHT JOIN table_name2 ON field_name1 = field_name2
+        WHERE id IS NULL;
+    
+    d. full outer join/full join --> returns all records when there is a match in both left or right 
+        table records.
+        select field_name1,field_name2 from table_name1 FULL OUTER JOIN table_name2 ON field_name1 = field_name2;
+
+    e. cross join --> allow you to produce a cartesian product of rows in two or more tables.
+        select * from table_name1 CROSS JOIN table_name2;
+    
+    f. Natural Join --> creates an implicit join based on the same column names in the joined tables.
+        SELECT * FROM table1 NATURAL [INNER, LEFT, RIGHT] JOIN table2;
+
+2. index --> Indexes are a common way to enhance database performance. An index allows the database 
+server to find and retrieve specific rows much faster.
+    CREATE INDEX idx_field_name ON table_name(field_name in table e.g phone);
+
+3. EXPLAIN --> statement to explain a query.
+    EXPLAIN SELECT *
+
+4. Primary Key --> Constrains uniquely identifies each record in a table. Primary key must contains
+unique values & can not contains NULL values.
+
+5. unique Key --> The unique Constraint ensures that all values in a column are different.
+Both Primary key & unique key Constraints provide uniqueness for a column or set of columns.
+
+6. Foreign Key --> is a field in one table that refers to the primary key in another table.
+
+7. ACID Properties
+    Atomic -->
