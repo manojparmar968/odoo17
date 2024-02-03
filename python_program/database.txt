@@ -11,6 +11,23 @@ UPDATE table_name set field_name = 'value';
 SELECT id,login,password from res_users where active = True;
 update res_users set password = 'admin' where id = ;
 
+5. Get employee_name, department_no, department_name based on department_name = 'EEE'
+select t2.employee_name,t1.department_no,t1.department_name from t1 
+JOIN t2 ON t1.department_no = t2.department_no where t1.department_name = 'EEE';
+
+6. Count emp in each department.
+select t1.department_name, COUNT(*) from t1  
+JOIN t2 ON t1.department_no = t2.department_no GROUP BY t1.department_name;
+
+7. department_no,department_name,employee_name
+select t1.department_no,t1.department_name,t2.employee_name from t1 
+left outer join t2 ON t1.department_no = t2.department_no;
+
+8. find department where salary >= 24000
+select t1.department_name,count(*) from t1
+join t2 on t1.department_no = t2.department_no group by t1.department_name 
+having t2.salary>=24000;
+
 5. Join --> is used to combine columns from one (self join) or more tables.
     a. Inner Join --> selects those records that have match values in both tables.
         select field_name1,field_name2 FROM table_name1 INNER JOIN table_name2 ON field_name1 = field_name2;
