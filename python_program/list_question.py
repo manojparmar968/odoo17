@@ -25,6 +25,9 @@
   list_b = [4, 5, 6, 7, 8]
 18. Middle Element in a List. numList = [1, 2, 3, 4, 5,6,7]
 19. Counting the occurrences of elements in the list. days = ['S','M','M','M','F','S']
+20. Find Missing Number, n = [1, 2, 3, 5, 6, 7, 8, 9,10,11,13,14,16]
+21. Find Duplicate Number in an Array, lis = [1, 2, 2, 3, 4, 4, 4, 5, 5]
+22. Find the number occurring odd number of times, lis = [1, 1, 2, 2, 3, 3, 3]
 15. * * * * *
     * * * *
     * * *     n = 5

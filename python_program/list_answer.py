@@ -26,6 +26,35 @@ days = ['S','M','M','M','F','S']
 y = set(days)
 print([[i,days.count(i)] for i in y])
 
+# Find Missing Number in an Array
+n = [1, 2, 3, 5, 6, 7, 8, 9,10,11,13,14,16]
+num = set(n)
+op = []
+
+for i in range(1, n[-1]):
+    if i not in num:
+        op.append(i)
+print(op)
+
+# Find Duplicate Number in an Array
+lis = [1, 2, 2, 3, 4, 4, 4, 5, 5]
+uniq_list = []
+dup_list = []
+
+for i in lis:
+    if i not in uniq_list:
+        uniq_list.append(i)
+    elif i not in dup_list:
+        dup_list.append(i)
+print(dup_list)
+
+# Find the number occurring odd number of times
+lis = [1, 1, 2, 2, 3, 3, 3]
+res = 0
+for i in lis:
+    res = res ^ i
+print(res)
+
 # count a total number in "n = 123654" have
 n = 123654
 count = 0
