@@ -64,9 +64,22 @@
     .sorted(lambda x: x.invoice_date_due or x.date)
     .sorted('date_start', reverse=True)
 
+# context
+    Context is used to pass parameter across the method calls from xml to python many of odoo method 
+    change their value based on the keys inside the context.
+    <filter string="" name="" context="{'':''}"/> # Filter
+    <field string="" name="" context="{'':''}"/> # fields
+    <field name="context">{}</field> # model="ir.actions.act_window"
+
+    Note:- Python dictionary is used to pass the data & frozenDict (immutable)
+
 # with_context()
+    is used to add or update keys of the context
+                    OR                      
     This method generates a new recordset with an additional context.
     self.with_context(force_delete=True)
+    self.env['product.product'].with_context(warehouse=self.warehouse_id.id)
+    product.with_context('location' : location_id).qty_available # this will return quantity on specific location
 
 # context manager
     Allow you to allocate & release resources precisely when you want to.
