@@ -68,6 +68,9 @@
     This method generates a new recordset with an additional context.
     self.with_context(force_delete=True)
 
+# context manager
+    Allow you to allocate & release resources precisely when you want to.
+
 # default_get()
     default_get method collect the default values for all the fields when creating a new record.
     def default_get(self, default_fields):
@@ -76,10 +79,16 @@
         contextual_self = self.with_context(default_name=default_name, default_code=default_code) # pass you need in placeof self
         return super(ClassName, self).default_get(default_fields)
 
+# Extension inheritance
+    Extension inheritance we will only use the _inherit attribute & do not use _name attribute.
+    _inherit = ['account.move']
+
 # Delegation inheritance
     Delegation inheritance we use _inherits attribute, this type of inheritance is used if you want
     to sink another model to your current model without affecting the views.
+    _name = "account.payment"
     _inherits = {'account.move': 'move_id'}
+    move_id = fields.Many2one(comodel_name='account.move')
 
 # with_user(user)
     If the user is not the superuser, return a new version of this recordset connected to the 
