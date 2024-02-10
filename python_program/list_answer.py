@@ -251,6 +251,11 @@ for i in range(1,n+1):
         count += 1
     print()
 
+# print triangle height 5.
+n = 5
+for x in range(n):
+    print(" " *(n-x-1) + "*" * (2*x+1))
+
 #Remove repeat character for string
 s = "innage" 
 print((list(set(s))))
