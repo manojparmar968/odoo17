@@ -33,6 +33,7 @@
 20. Find Missing Number, n = [1, 2, 3, 5, 6, 7, 8, 9,10,11,13,14,16]
 21. Find Duplicate Number in an Array, lis = [1, 2, 2, 3, 4, 4, 4, 5, 5]
 22. Find the number occurring odd number of times, lis = [1, 1, 2, 2, 3, 3, 3]
+24. from given list arr = [-1,0,1,2,3,5,6], find two values which sum is equal to sum = 3.
 15. * * * * *
     * * * *
     * * *     n = 5

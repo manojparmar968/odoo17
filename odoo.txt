@@ -87,6 +87,12 @@
 #  Assert functions
     Assert functions are used to check whether the operation's output is True or False.
 
+# fields_views_get 
+    fields_views_get has been renamed to get_view in Odoo 16.
+    This method returns the fields_views of given views, along with the fields of the current model, 
+    and optionally its filters for the given action.
+    It returns the dictinory.
+
 # default_get()
     default_get method collect the default values for all the fields when creating a new record.
     def default_get(self, default_fields):

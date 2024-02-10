@@ -26,5 +26,3 @@ n = 5
 #     print()
 
 nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
-
-# fields_view_get()
