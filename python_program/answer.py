@@ -27,22 +27,17 @@ n = 5
 
 nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
 n = [3,2,1,5,4,6,7,8]
-# for i in n:
-    # for j in 
-# print(sorted(n)[0])
-middle = int(len(n)/2)
-# print(middle)
+
 for i in range(len(n)):
     for j in range(i+1, len(n)):
         if n[i] >= n[j]:
             n[i],n[j] = n[j],n[i]
-print(n[0])
-
-# depnds
-# total = fields.integer(cpmpute="total_value")
-# <field name ="" context="{'':''}"/>
+print(n)
+n1 = [3,2,1,5,4,6,7,8]
+for x in range(len(n1)):
+    for y in range(x+1,len(n1)):
+        if n1[x] <= n1[y]:
+            n1[x],n1[y] = n1[y],n1[x]
+print(n1)
 # fields_view_get()
 
-# def total_value(self):
-    # ensure_one()
-    # for i i

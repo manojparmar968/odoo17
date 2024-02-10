@@ -7,6 +7,10 @@ l2 = [2,3,4,6,8,9,10]
 print(list(set(l1+l2)))
 
 # sort a list without any inbuilt method
+# Note- Ascending order condition 
+        # n[] >= n[]
+    # Descending order
+        # n[] <= n[]
 n = [3,2,1,5,4,6,7,8]
 for i in range(len(n)):
     for j in range(i+1, len(n)):
