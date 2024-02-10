@@ -5,6 +5,7 @@
 2. Find common elements between two lists.
   list_a = [1, 2, 3, 4, 5]
   list_b = [4, 5, 6, 7, 8]
+3. sort a list without any inbuilt method & find lowest number, n = [3,2,1,5,4,6,7,8]
 3. count a total number in n = 123654
 4. count even and odd from given list, l = [1,2,3,8,9,5,7,6,4] and seprate even and odd numbers.
 5. n = 20, o/p = 1 2 3 4 tom 6 cat 8 9 tom 11 12 13 cat tom 16 17 18 19 tom

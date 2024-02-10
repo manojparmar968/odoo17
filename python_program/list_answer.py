@@ -6,6 +6,13 @@ l1 = [1,3,5,7,8,10]
 l2 = [2,3,4,6,8,9,10]
 print(list(set(l1+l2)))
 
+# sort a list without any inbuilt method
+n = [3,2,1,5,4,6,7,8]
+for i in range(len(n)):
+    for j in range(i+1, len(n)):
+        if n[i] >= n[j]:
+            n[i],n[j] = n[j],n[i]
+
 # common elements between two lists.
 list_a = [1, 2, 3, 4, 5]
 list_b = [4, 5, 6, 7, 8]

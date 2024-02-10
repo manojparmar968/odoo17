@@ -34,7 +34,7 @@
 
 # name_get()
     name_get() function returns a list of pairs (id, text_repr) for each records and the return
-    type is a list(tuple)
+    type is a list(tuple).
     def name_get(self):
         return list(zip(records._ids, records.mapped('display_name')))
         return [(record.id, record.display_name) for record in self]
@@ -74,7 +74,7 @@
     Note:- Python dictionary is used to pass the data & frozenDict (immutable)
 
 # with_context()
-    is used to add or update keys of the context
+    is used to add or update keys of the context.
                     OR                      
     This method generates a new recordset with an additional context.
     self.with_context(force_delete=True)
@@ -83,6 +83,9 @@
 
 # context manager
     Allow you to allocate & release resources precisely when you want to.
+
+#  Assert functions
+    Assert functions are used to check whether the operation's output is True or False.
 
 # default_get()
     default_get method collect the default values for all the fields when creating a new record.
