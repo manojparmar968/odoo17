@@ -1,0 +1,20 @@
+{
+    "name": "sale field copy",
+    "version": '1.0.0',
+    "category": "interview/Sales & Inventory",
+    "license": "AGPL-3",
+    "summary": "",
+    "author": " Inc",
+    "maintainers": ["Manoj Parmar"],
+    "website": "www.xyz.com",
+    "depends": ['base','sale'],
+    "data": [
+        # "security/ir.model.access.csv",
+        # "views/.xml",
+        # "report/.xml",
+        # "data/multiple_cron.xml",
+    ],
+    "installable": True,
+    'auto_install': False,
+    "application": True,
+}

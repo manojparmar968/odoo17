@@ -32,8 +32,10 @@
 15. unpickling
 16. generators
 17. dictionary
-18. args
-19. kwargs
+18. *args (Non Keyword Arguments)
+19. **kwargs (Keyword Arguments)
+    Note:- We use args and *kwargs as an argument when we are unsure about the number of arguments 
+    to pass in the functions.
 20. shallow copy, example
 21. deep copy, example
 22. decorators

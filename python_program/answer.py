@@ -26,3 +26,21 @@ n = 5
 #     print()
 
 nums = [1, 2, 3, 2, 1, 3, 2, 4, 5, 4]
+n=[5,2,1,4,3,2,8,4,2,1,2,0]
+
+uniq_list = []
+c = 0
+count = []
+for i in n:
+    if i not in uniq_list:
+        uniq_list.append(i)
+        c = n.count(i)
+        count.append(c)
+print(uniq_list,count)
+d= {}
+for k in uniq_list:
+    for v in count:
+        d[k] = v
+        count.remove(v)
+        break
+print(d)

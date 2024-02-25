@@ -121,5 +121,8 @@
     result.env.company = company
     result.env.companies = self.env.companies | company
 
+# Create basic module by cmd
+    ./odoo-bin scaffold module_name ../addons_path
+
 # Need to read
 flush_model
