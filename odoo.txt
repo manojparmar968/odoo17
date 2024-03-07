@@ -121,6 +121,12 @@
     result.env.company = company
     result.env.companies = self.env.companies | company
 
+# /web/database/selector
+
+# What is difference between write and update in Odoo?
+    in write method, all the record has been updated of model and in update method, 
+    only particular filed of record you can update. 
+
 # Create basic module by cmd
     ./odoo-bin scaffold module_name ../addons_path
 
