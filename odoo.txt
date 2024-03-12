@@ -127,6 +127,15 @@
     in write method, all the record has been updated of model and in update method, 
     only particular filed of record you can update. 
 
+# 2 types of Button Call
+    1. object type that call python function
+        name="button_action_"
+    2. action type that call action from xml file
+        name="%(button_action_)d"
+
+# record set we get number of ids for given domain
+# search read will give dict.
+
 # Create basic module by cmd
     ./odoo-bin scaffold module_name ../addons_path
 
