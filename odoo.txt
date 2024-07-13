@@ -9,6 +9,8 @@
 # search()
     The search method is used to search records with in the given model based on the domain 
     passed as the argument.
+                OR
+    .search([]) is a orm method which helps to return list of record sets on the basis of domain.
     self.env['model.name'].search([('fieldName', '=', value),
                                 ('name', 'in', module_list),
                                 ('id', '!=', ()),
@@ -74,6 +76,8 @@
     Note:- Python dictionary is used to pass the data & frozenDict (immutable)
 
 # with_context()
+    .with_context() helps to send some extra context along with current environment. 
+    You can use .with_context() with ORM methods like search(), browse(), read().
     is used to add or update keys of the context.
                     OR                      
     This method generates a new recordset with an additional context.
@@ -139,5 +143,36 @@
 # Create basic module by cmd
     ./odoo-bin scaffold module_name ../addons_path
 
+# copy=False
+    If you put copy=False to a field, When you duplicate a record, 
+    That value is not copied to duplicating (Newly created)record.
+
+# ondelete='cascade'
+    If you put this to a Many2one field, the deletion of record will cause to deletion of one2one records according to that record.
+    Eg:
+    When you delete a Sale Order, It will delete sale order lines also.
+
+# Index=True
+    You can speed the database search performance. However, you should be careful not to add indexes on too many fields because the size of the database can rapidly increase. 
+    Which means, you should carefully detect the most searchable fields and to create indexes for them only.
+
+# _auto = False: 
+    with _auto = False on the model to don't trigger the database table creation for the model,
+    but we can not use in TransientModel.
+
+# Inverse: 
+    The inverse function is mainly used to make the compute field editable. 
+    A user can’t change a compute field value.
+    An inverse function can be used to solve this problem.
+    This inverse function can be given along with the compute function.
+
+# Git Commands
+    When Remove folder from git not from local
+        git rm --cached -r folderName
+    When remove folder from both git & local
+        git rm -r folderName/FileName
+        git commit -m "module is removed not in use"
+        git push origin branch name
+    sudo rm -rf
 # Need to read
 flush_model
