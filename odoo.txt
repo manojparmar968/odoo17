@@ -54,6 +54,11 @@
     .search_read([],[])
     self.env[model_name].search_read([], ['create_uid'])
 
+# search_get() 
+    Method is primarily designed to work with many2one fields or in scenarios where you want to customize 
+    the dropdown or search functionality for a field.
+    search_get(domain=[], fields=['name'], context=None, limit=80, name_search=True)
+
 # sort()
     value.sort(key=lambda x: x['sort_weight'])
     value.sort(key=lambda k: (k['all_reached'], k['total_completeness']), reverse=True)
@@ -165,6 +170,67 @@
     A user can’t change a compute field value.
     An inverse function can be used to solve this problem.
     This inverse function can be given along with the compute function.
+
+# computed fields and onchanges -:
+    both computed fields and onchanges may be used to achieve the same result. 
+    Always prefer computed fields since they are also triggered outside of the context of a form view. 
+    Never ever use an onchange to add business logic to your model. 
+    This is a very bad idea since onchanges are not automatically triggered when creating a record programmatically; they are only triggered in the form view.
+
+    When computed fields depend on other computed fields, changing a value can trigger a large number of recomputations. This leads to poor performance.
+
+_ :-
+note is that our method name isn’t prefixed with an underscore (_). This makes our method a public method,
+which can be called directly from the Odoo interface (through an RPC call). 
+Until now, all methods we created (compute, onchange) were called internally, so we used private methods prefixed by an underscore. 
+You should always define your methods as private unless they need to be called from the user interface.
+
+Always assume that a method can be called on multiple records; it’s better for reusability.
+Finally, a public method should always return something so that it can be called through XML-RPC. When in doubt, just return True.
+
+1.What is the difference between reordering and replenishment in Odoo?
+Reordering rules and replenishment are features in Odoo that help manage inventory efficiently. 
+Reordering rules automatically generate purchase or manufacturing orders when a product's stock level drops below a certain threshold. 
+Replenishment is a manual process that restocks products to maintain inventory levels.
+
+2.Odoo Stock Removal Strategies?
+1. First In First Out (FIFO) :- Products/Lots that were stocked first will be moved out first.
+2. Last In First Out (LIFO) :- Products/Lots that were stocked last will be moved out first.
+3. Closest Location :- Products/Lots with the closest to the target location will be moved out first.
+4. First Expiry First Out (FEFO) :- Products/Lots with the closest removal date will be moved out first(The availability of this method depends on the "Expiration Dates" Settings.)
+5. Least Packages :- FIFO but with the least number of packages possible when there are several packages containing the same product.
+
+3.Consignment inventory?
+Consignment inventory is a supply chain model where a retailer sells a supplier's product, but the supplier retains ownership until the product is sold. 
+The retailer only pays for the items they sell, and can return any unsold items to the supplier. The supplier, or consignor, 
+receives payment from the retailer, or consignee, based on an agreed-upon arrangement, such as a fixed fee or percentage of the sale price. 
+
+4.Blanket Order?
+A blanket order, blanket purchase agreement or call-off order is a purchase order which a customer places with its supplier to allow multiple delivery dates over a period of time, 
+often negotiated to take advantage of predetermined pricing. It is normally used when there is a recurring need for expendable goods.
+
+5.Deffered income and expense?
+Deferred revenue is money a company receives before it provides goods or services, 
+while deferred expenses are costs a company pays that aren't recorded until later. Deferred revenue is also known as unearned revenue. 
+
+Examples of deferred revenue include:
+Rent payments received in advance.
+Annual subscription payments received at the beginning of the year 
+
+Examples of deferred expenses include:
+Prepaid expenses, such as a company paying for a year-long billboard advertisement
+Exceptional losses, such as damages due to a major earthquake
+
+6.What is Agile methodology?
+Agile methodology is a project management framework that breaks projects down into several dynamic phases, commonly known as sprints. 
+The Agile framework is an iterative methodology. After every sprint, teams reflect and look back to see if there was anything that could 
+be improved so they can adjust their strategy for the next sprint.
+a. Plan
+b. Design
+c. Develop
+d. Test
+e. Deploy
+f. Review
 
 # Git Commands
     When Remove folder from git not from local
