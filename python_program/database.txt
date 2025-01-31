@@ -77,3 +77,17 @@ Both Primary key & unique key Constraints provide uniqueness for a column or set
 
 7. ACID Properties
     Atomic -->
+
+Steps: Restore DB by cmd
+    1. Login postgres : sudo su postgres 
+    2. Create a new db: createdb -O database_user new_db_name 
+    3. Restore: psql new_db_name (angle bracket) dump.sql
+    sudo su postgres
+    cd ../
+    cd ./manoj/.local/share/Odoo/
+    ls
+    cd filestore/
+    ls
+    sudo mv /home/manoj/Downloads/qewr/prod_new_01-07-2024.2024-07-02/2july5pm/ /home/manoj/.local/share/Odoo/filestore/
+    ls
+    sudo su postgres
